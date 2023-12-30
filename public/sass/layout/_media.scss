@@ -1,0 +1,143 @@
+
+@media (max-width: 1025px) {
+    *{
+        &::-webkit-scrollbar{ display: none; }
+    }
+    html{
+        font-size: 90%;
+    }
+    header{
+        max-height: 30rem;
+    }
+    footer{
+        li{
+            flex-wrap: wrap;
+            &:first-child{
+                flex-direction: column-reverse;
+                .logo{
+                    margin: .5rem auto 1rem;
+                }
+            }
+            &:last-child{
+                > div{
+                    min-width: 100%; margin: 0 auto 2rem;
+                }
+            }
+        }
+    }
+    .error-page{
+        margin: 0 auto 10rem; flex-direction: column-reverse;
+        .image{ margin: 4rem auto; width: 10rem; }
+        &.config{ margin: auto; }
+    }
+    .card{
+        width: 33.333%;
+    }
+}
+@media (max-width: 800px) {
+    nav{
+        main{ justify-content: flex-end; }
+        .links{ display: none; }
+    }
+    header{
+        background-image: url('/media/header/2.png');
+        max-height: 12rem;
+        margin: 1rem auto 0;
+
+        main{
+            width: 90%; max-width: 85rem;
+            
+            .data{
+                padding: 2rem 1.5rem;
+                width: auto; margin: -2rem 0 0;
+                
+                h1{
+                    text-align: left; color: #999;
+                    transform: scale(.9);
+                }
+                p{ display: none; }
+            }
+        }
+    }
+    .card{
+        margin: 0 auto 1rem;
+        padding: 0; min-width: 100%;
+        
+        > div{
+            box-shadow: .1rem .1rem 1rem #7771, -.1rem -.1rem 1rem #7773;
+        }
+        .small{
+            .image{ min-height: 13rem; }
+            .btns{
+                a{
+                    padding: .8rem 0;
+                    font-size: 1rem;
+                }
+            }
+            .info{
+                h1{
+                    font-size: 1.1rem;
+                    max-height: 5rem;
+                }
+                p{ color: #444; font-size: 1rem; }
+                .rating{
+                    span{ font-size: 1rem; }
+                }
+                .pricing{
+                    span:last-child{ font-size: 1.1rem; }
+                    span:first-child{ font-size: 1rem; }
+                }
+            }
+        }
+    }
+    .main{
+        .title{
+            span{ font-size: 1.6rem; }
+        }
+    }
+    .course-page{
+        .intro{
+            flex-wrap: wrap;
+            margin: 1rem auto;
+
+            .image{
+                width: 100%;
+            }
+            .details{
+                width: 100%; margin: 2rem auto 0;
+                padding: 0;
+
+                h1, h2{ span{ min-width: 100%; } }
+                h1{
+                    span{ font-size: 1.3rem; line-height: 150%; }
+                }
+                h2{
+                    margin-top: 1rem;
+                    span{ line-height: 160%; }
+                }
+            }
+        }
+        .info{
+
+            > div{
+                margin: .5rem auto;
+            }
+            ul{
+                li{
+                    width: 100%; margin: .5rem auto;
+                    align-items: flex-start;
+
+                    span{
+                        line-height: 160%; margin-top: 1px;
+                        font-size: .95rem;
+                    }
+                }
+                &.between{
+                    li{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

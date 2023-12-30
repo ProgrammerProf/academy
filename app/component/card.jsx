@@ -1,6 +1,6 @@
 "use client";
 import Stars from "@/app/component/stars";
-import { host } from "@/public/script/public";
+import { fix_number, host } from "@/public/script/public";
 import Link from "next/link";
 
 export default function Card ({ data, big }) {
@@ -35,7 +35,7 @@ export default function Card ({ data, big }) {
 
                         <div className='rating'>
 
-                            <span>({data.reviews})</span>
+                            <span>( {fix_number(data.reviews)} )</span>
 
                             <Stars rate={data.rate}/>
 
