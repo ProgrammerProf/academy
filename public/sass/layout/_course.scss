@@ -1,0 +1,161 @@
+
+.course-page{
+  
+    .intro{
+        @extend .flex, .flex-space, .full-width;
+        background: var(--dark-back);
+        margin: 1.5rem auto 1rem; padding: 2rem;
+        align-items: flex-start;
+        border-radius: var(--radius);
+    
+        .image{
+            @extend .flex, .relative, .layer, .over-hide;
+            width: 20rem; height: 13rem;
+            border-radius: var(--radius);
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--site-color);
+
+            img{ width: 100%; height: 100%; }
+        }
+        .details{
+            @extend .default;
+
+            .category{
+                @extend .full-width, .flex, .flex-end, .no-select;
+            
+                span{
+                    font-size: .95rem; padding: .3rem 1rem;
+                    letter-spacing: .5px; font-weight: bold;
+                    border-radius: var(--radius);
+                    color: #333; background: #fff;
+                }
+            }
+            h1, h2{
+                margin: 1rem auto .5rem;
+                @extend .full-width, .flex, .flex-end;
+
+                span{
+                    line-height: 160%; text-align: right;
+                    font-size: 1.6rem; font-weight: bold;
+                    direction: rtl; color: #fff; max-width: 80%;
+                }
+            }
+            h2{
+                margin: auto;
+                span{
+                    font-size: 1rem; color: #ddd;
+                    letter-spacing: .5px;
+                }
+            }
+            .rating{
+                margin: 1rem auto .5rem;
+                @extend .full-width, .flex, .flex-end;
+
+                span{
+                    font-size: .95rem; margin: 0 .3rem;
+                    color: #fff;
+                }
+                div{
+                    margin: 0 0 0 .3rem;
+                    i{ color: #ff9c23; font-size: 1.1rem }
+                }
+            }
+            ul{
+                margin: 1rem auto 0;
+                @extend .flex, .flex-column, .full-width;
+
+                li{
+                    margin: .4rem auto;
+                    @extend .flex, .flex-end, .full-width;
+
+                    span{
+                        font-size: 1.1rem; color: #fff;
+                        direction: rtl;
+                        &:first-child{ margin: 0 .5rem }
+                    }
+                }
+            }
+            .pricing{
+                margin: 1rem auto 0;
+                @extend .flex, .flex-start, .full-width;
+
+                span{
+                    color: #Fff; font-weight: bold;
+                    font-size: 1.5rem;
+
+                    &:first-child{
+                        margin: 0 .8rem; font-size: 1.2rem;
+                        color: rgb(255, 115, 64);
+                        text-decoration: line-through;
+                    }
+                }
+            }
+            .btns{
+                margin: 2rem auto 0;
+                @extend .flex, .flex-start, .full-width;
+
+                a{
+                    @extend .flex, .pointer;
+                    font-weight: bold; letter-spacing: .5px;
+                    font-size: 1.1rem; padding: .8rem 0;
+                    width: 12rem; border-radius: var(--radius);
+                    background: var(--site-color); color: #fff;
+                    border: 1px solid var(--site-color);
+
+                    &:first-child{
+                        background: none; margin: 0 1rem;
+                        color: var(--site-color-hover);
+                    }
+                    &:hover{
+                        background: var(--site-color-hover);
+                        opacity: .9; color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    .info{
+        margin: 0 auto 4rem;
+        @extend .flex, .flex-column;
+
+        > div{
+            width: 100%; margin: 1rem auto;
+            border: 1px solid #ddd;
+            padding: 2rem;
+            border-radius: var(--radius);
+        }
+        h1{
+            font-size: 22px; font-weight: bold;
+            margin: 0 0 1rem; color: #000;
+            text-align: right; direction: rtl;
+        }
+        ul{
+            @extend .flex, .flex-start, .flex-wrap;
+            direction: rtl;
+
+            li{
+                @extend .flex, .flex-start, .default; width: 50%;
+                margin: .7rem 0; direction: rtl;
+                
+                span{
+                    font-size: .9rem; letter-spacing: .5px;
+                    color: #333; font-weight: bold;
+                    direction: rtl;
+                    &:nth-child(2){ margin: -1px .5rem 0; }
+                }
+            }
+            &.between{
+                @extend .flex-space;
+
+                li{
+                    margin: .5rem 0; opacity: .8;
+                    border-right: 3px solid var(--site-color-hover);
+                    width: 48.5%; padding: 1rem;
+                    background: var(--light-back);
+                    border-radius: var(--radius);
+                    span{ color: #000; }
+                }
+            }
+        }
+    }
+}
