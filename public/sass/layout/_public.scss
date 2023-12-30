@@ -553,7 +553,7 @@ footer{
     }
     .tags{
         ul{
-            margin: -.5rem auto 2rem; direction: rtl;
+            margin: -.5rem auto 1rem; direction: rtl;
             @extend .flex, .flex-start, .flex-wrap, .full-width, .no-select;
 
             li{
