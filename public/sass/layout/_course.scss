@@ -10,7 +10,7 @@
     
         .image{
             @extend .flex, .relative, .layer, .over-hide;
-            width: 18rem; height: 10rem;
+            width: 18rem; height: 11rem;
             border-radius: var(--radius);
             background: rgba(0, 0, 0, 0.5);
             border: 1px solid var(--site-color);
