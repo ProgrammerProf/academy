@@ -2,14 +2,22 @@
 import Nav from "@/app/component/nav";
 import Footer from "@/app/component/footer";
 import Stars from "@/app/component/stars";
-import { host, fix_date, fix_number } from "@/public/script/public";
-import { Fragment } from "react";
+import { host, fix_date, fix_number, print } from "@/public/script/public";
+import { Fragment, useEffect } from "react";
 import Link from "next/link";
 import {MdInfo} from "react-icons/md";
 import {TbWorld} from "react-icons/tb";
 import {BiCheck} from "react-icons/bi";
+import $ from "jquery";
 
 export default function Course ({ data, categories, settings }) {
+
+    const toggle_video = () => {
+
+        if ( $("video")[0]?.paused ) $("video")[0]?.play();
+        else $("video")[0]?.pause();
+
+    }
 
     return (
 
@@ -20,6 +28,62 @@ export default function Course ({ data, categories, settings }) {
             <div className="container">
 
                 <div className="course-page">
+
+                    <main className="lecturer">
+
+                        <div className="data">
+
+                            <div>
+
+                                <div className="name">
+
+                                    <h1>{data.lecturer_name}</h1>
+
+                                    <p>{data.lecturer_location}</p>
+
+                                </div>
+
+                                <div className="image">
+
+                                    <img src={`${host}${data.lecturer_image}`}/>
+
+                                </div>
+
+                            </div>
+
+                            <div>
+
+                                <h2>{data.description}</h2>
+
+                            </div>
+
+                            <div className='btns'>
+
+                                <Link href={`tel:${data.phone}`}>
+                                    أو اتصل بنا
+                                </Link>
+
+                                <Link href={`https://web.whatsapp.com/send/?phone=${data.phone}`} target="_blank">
+                                    إحجز الان
+                                </Link>
+
+                            </div>
+                            
+                        </div>
+
+                        <div className="video">
+
+                            {
+                                data.video[1] === 'video' ?
+                                <video src={`${host}${data.video[0]}`} autoPlay loop></video> :
+                                <img src={`${host}${data.video[0]}`}/>
+                            }
+
+                            <div className="cover" onClick={toggle_video}></div>
+                        
+                        </div>
+
+                    </main>
 
                     <main className='intro'>
 

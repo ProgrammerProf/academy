@@ -102,6 +102,27 @@
         }
     }
     .course-page{
+        .lecturer{
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+            margin: 2rem auto;
+
+            .video, .data{
+                width: 100%; margin: auto;
+            }
+            .data{
+                margin: 2rem auto 0;
+            }
+            .btns{
+                justify-content: space-between;
+                margin: 1rem auto 0;
+
+                a{
+                    width: 48%; margin: 0;
+                    &:first-child{ margin-left: 0; }
+                }
+            }
+        }
         .intro{
             flex-wrap: wrap;
             margin: 1rem auto;
@@ -143,6 +164,26 @@
                         width: 100%;
                     }
                 }
+            }
+        }
+    }
+    .describe{
+        width: 100%;
+    }
+    .hr{
+        margin: 2rem auto;
+        p{ display: none; }
+    }
+    .titling{
+        margin: 1rem auto;
+    }
+    .chat-div{
+        > div{
+            width: 100%;
+            .wlc{ top: 46px; height: calc(100% - 46px); }
+            .content{
+                top: 46px; height: calc(100% - 107px);
+                &::-webkit-scrollbar{ display: none; }
             }
         }
     }
