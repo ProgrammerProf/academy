@@ -118,7 +118,7 @@
 }
 
 .banner-div{
-    --back-color: rgb(58, 64, 74);
+    --back-color: var(--dark-back);
     @extend .no-select, .layer, .over-hide, .flex;
     height: 20rem;
     background: var(--back-color);

@@ -8,7 +8,7 @@ export default function Header ({ settings }) {
 
             <main>
 
-                <div className='data'>
+                {/* <div className='data'>
 
                     <h1>{settings.name}</h1>
 
@@ -17,7 +17,7 @@ export default function Header ({ settings }) {
                          . تحت إشراف مهندسين برمجة محترفين وذوى خبرة عالية فى المجال
                     </p>
 
-                </div>
+                </div> */}
 
             </main>
 
