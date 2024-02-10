@@ -1,7 +1,7 @@
 "use client";
 import $ from "jquery";
 import { Fragment, useState } from "react";
-import { api, alert_msg, set_session } from "@/public/script/public";
+import { api, alert_msg, set_session, date } from "@/public/script/public";
 import Link from "next/link";
 
 export default function Footer ({ page, settings }) {
@@ -169,8 +169,10 @@ export default function Footer ({ page, settings }) {
 
                                 <ul className="full-width flex flex-column no-select about">
                                     <div>
-                                        تبدأ الحكاية بتأسيس شركة طيبة الخير عام 2008 لتكون أحد أهم الشركات الرائدة في تقديم منظومة متكاملة من 
-                                         بالسوق العقاري بتقديم أجود المنتجات وأفضل الحلول العقارية لتكون بذلك العلامة الفارقة في مجالها.
+                                        نحن منصة تعليمية إلكترونية توفر خدمات التدريب والتعليم عن بعد
+                                        وتقدم مجموعة متنوعة من المواد التعليمية و مجموعة واسعة من
+                                        الدورات التدريبية والأنشطة التعليمية لجميع الأعمار كما تقدم
+                                        المنصة دورات الدعم للطالب وأولياء الأمور.
                                     </div>
                                 </ul>
 
@@ -188,7 +190,7 @@ export default function Footer ({ page, settings }) {
                     <main className="flex">
                         <p className="full-width flex  defualt no-select">
                             <span>
-                            @ {settings.name} - جميع الحقوق محفوظة 2023 
+                                @ {settings.name} - جميع الحقوق محفوظة {date('year')} 
                             </span>
                         </p>
                     </main>
