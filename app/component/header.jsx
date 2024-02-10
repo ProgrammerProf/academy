@@ -19,6 +19,12 @@ export default function Header ({ settings }) {
 
                 </div> */}
 
+                <div className="image">
+
+                    <video src="/media/header/4.mp4" onClick={(e) => e.target.play()} autoPlay loop muted></video>
+
+                </div>
+
             </main>
 
         </header>

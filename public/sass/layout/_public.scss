@@ -5,9 +5,19 @@
     --footer: #251e15;
     --dark-back: #625038;
     --light-back: #fffaec;
+    --btn-back: #bca171;
+    --btn-hover: #d5b987;
     --radius: .5rem;
     --spacing : 0.1rem;
     --transition: all 200ms linear;
+
+    --site-color: #000;
+    --site-color-hover: #111;
+    --footer: #111;
+    --dark-back: #111;
+    --btn-back: #444;
+    --btn-hover: #666;
+    --light-back: rgba(0, 0, 0, .05);
 }
 
 main{
@@ -126,14 +136,15 @@ nav{
 }
 
 header{
-    background-image: url('/media/header/3.png');
+    // background-image: url('/media/header/4.mp4');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 29rem; border-radius: var(--radius);
     width: 90%; max-width: 85rem; margin: 1.5rem auto 0;
+    background: #0b0b0b;
 
     main{
-        @extend .full-height, .flex, .flex-start, .no-select, .layer;
+        @extend .full-height, .flex, .flex-start, .no-select, .layer, .over-hide;
 
         .data{
             background: rgba(0, 0, 0, 0.05);
@@ -153,6 +164,14 @@ header{
                 margin: 1rem 0 0; color: #cccccc;
                 line-height: 170%; padding: 0 0 0 3rem;
                 font-size: 1rem; letter-spacing: .5px;
+            }
+        }
+        .image{
+            @extend .absolute, .full-width, .full-height;
+
+            img, video{
+                min-width: 100%; min-height: 100%;
+                max-width: 100%; max-height: 100%;
             }
         }
     }
@@ -210,7 +229,7 @@ footer{
     
             .logo{
                 font-weight: bold; font-size: 1.4rem;
-                color: var(--site-color);
+                color: #ddd;
                 img{ min-width: 6rem; height: 1.4rem; filter: grayscale(60%); }
                 &:hover{ text-decoration: none; }
             }
@@ -250,7 +269,7 @@ footer{
                         &.head{
                             color: #cbcbcb;
                             padding: 0 0 .7rem 2rem; margin: 0;
-                            border-bottom: 1px solid var(--site-color);
+                            border-bottom: 1px solid #999;
                             font-size: 1rem;
                             letter-spacing: 1px; cursor: default;
                             text-decoration: none;
@@ -267,7 +286,7 @@ footer{
                         color: #dddd; margin: .6rem 0 0;
 
                         &:focus{
-                            border-color: var(--site-color);
+                            border-color: #444;
                         }
                     }
                     button{
@@ -275,7 +294,7 @@ footer{
                         border-radius: var(--radius); cursor: pointer;
                         color: #fff; background: var(--site-color);
                         font-size: .95rem; letter-spacing: .5px;
-                        &:hover{ background: var(--site-color-hover); }
+                        &:hover{ opacity: .9; }
                     }
                 }
                 .about{
